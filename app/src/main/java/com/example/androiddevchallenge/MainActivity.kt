@@ -23,14 +23,20 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.androiddevchallenge.ui.NavGraph
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+//            window?.insetsController?.hide(WindowInsets.Type.statusBars());
+//        } else {
+//            window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        }
         setContent {
             MyTheme {
-                MyApp()
+                NavGraph()
             }
         }
     }
